@@ -1,6 +1,6 @@
 ## Description
 
-Salman Rizqi Fatih - Roketin NodeJS Engineer Test Case Submission
+Salman Rizqi Fatih - Upscale NodeJS Test Submission
 
 ## Run with Docker
 
