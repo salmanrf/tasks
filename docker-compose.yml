@@ -4,13 +4,14 @@ services:
   api:
     container_name: tasks-api
     build: .
-    command: sh -c "npx nodemon src/index.ts"
     ports:
       - "${PORT}:${PORT}"
     volumes:
-      - ./:/home/app
+      - ./:/usr/src/app
     env_file:
       - .env
+    depends_on:
+      - mysql
   mysql:
     container_name: tasks-mysql
     image: mysql:latest

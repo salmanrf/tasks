@@ -1,9 +1,12 @@
 FROM node:lts-alpine3.16
 
-WORKDIR /home/app
+WORKDIR /usr/src/app
+
+COPY package.json ./
+COPY yarn.lock ./
+
+RUN yarn
 
 COPY . .
 
-RUN yarn add -D typescript nodemon ts-node
-
-RUN yarn
+CMD yarn start
