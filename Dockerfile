@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.16
+FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
@@ -8,5 +8,3 @@ COPY yarn.lock ./
 RUN yarn
 
 COPY . .
-
-CMD yarn start
